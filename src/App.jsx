@@ -5,7 +5,6 @@ import Project from "./Components/Project";
 import Contact from "./Components/Contact";
 import Outletnav from "./Components/Outletnav";
 import Resume from "./Components/Resume";
-import Blog from "./Components/Blog";
 
 const App = () => {
   return (
@@ -15,7 +14,6 @@ const App = () => {
         <Route  path="/" element={<Home />} />
         <Route  path="/project" element={<Project />} />
         <Route  path="/contact" element={<Contact />} />
-        <Route  path="/blog" element={<Blog />} />
         <Route  path="/resume" element={<Resume />} />
         </Route>
       </Routes>

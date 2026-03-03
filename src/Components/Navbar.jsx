@@ -1,146 +1,3 @@
-// import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import { MdLightMode, MdDarkMode } from 'react-icons/md';
-// import { useDarkMode } from '../../DarkModeContext';
-
-// const Navbar = () => {
-//   const { isDarkMode, toggleDarkMode } = useDarkMode();
-//   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-//   const handleToggleDropdown = () => {
-//     setIsDropdownOpen((prev) => !prev);
-//   };
-
-//   return (
-//     <div>
-//       <nav
-//         className={`fixed top-0 left-0 right-0 z-50 border-gray-200 ${
-//           isDarkMode ? 'bg-black text-white' : 'bg-white text-black'
-//         }`}
-//       >
-//         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-//           <Link
-//             to="/"
-//             className="flex items-center space-x-3 rtl:space-x-reverse"
-//           >
-//             <span className="self-center animate-bounce font-bold md:text-xl text-md whitespace-nowrap">
-//               {"<"}AYO <span className='text-yellow-300'>MIDE{"/>"}</span>
-//             </span>
-//           </Link>
-
-//           <button
-//             onClick={handleToggleDropdown}
-//             type="button"
-//             className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none ${
-//               isDarkMode
-//                 ? 'text-gray-400 hover:bg-white focus:ring-white'
-//                 : 'text-gray-500 focus:ring-gray-200'
-//             }`}
-//             aria-controls="navbar-default"
-//             aria-expanded={isDropdownOpen}
-//           >
-//             <span className="sr-only">Open main menu</span>
-//             <svg
-//               className="w-5 h-5"
-//               aria-hidden="true"
-//               xmlns="http://www.w3.org/2000/svg"
-//               fill="none"
-//               viewBox="0 0 17 14"
-//             >
-//               <path
-//                 stroke="currentColor"
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 strokeWidth="2"
-//                 d="M1 1h15M1 7h15M1 13h15"
-//               />
-//             </svg>
-//           </button>
-
-//           <div
-//             className={`w-full md:block md:w-auto ${
-//               isDropdownOpen ? 'block' : 'hidden'
-//             }`}
-//             id="navbar-default"
-//           >
-//             <ul
-//               className={`font-medium flex flex-col p-4 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ${
-//                 isDarkMode
-//                   ? 'bg-black border-gray-700 md:bg-transparent text-white'
-//                   : 'bg-white border-gray-100 md:bg-transparent text-black'
-//               }`}
-//             >
-//               <li>
-//                 <Link
-//                   to="/"
-//                   className={`block py-2 px-3 rounded md:p-0 ${
-//                     isDarkMode
-//                       ? 'hover:text-white'
-//                       : 'hover:bg-gray-100 hover:text-blue-700'
-//                   }`}
-//                 >
-//                   Home
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   to="/project"
-//                   className={`block py-2 px-3 rounded md:p-0 ${
-//                     isDarkMode
-//                       ? 'hover:text-white'
-//                       : 'hover:bg-gray-100 hover:text-blue-700'
-//                   }`}
-//                 >
-//                   Project
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   to="/resume"
-//                   className={`block py-2 px-3 rounded md:p-0 ${
-//                     isDarkMode
-//                       ? 'hover:text-white'
-//                       : 'hover:bg-gray-100 hover:text-blue-700'
-//                   }`}
-//                 >
-//                   Resume
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link
-//                   to="/contact"
-//                   className={`block py-2 px-3 rounded md:p-0 ${
-//                     isDarkMode
-//                       ? 'hover:text-white'
-//                       : 'hover:bg-gray-100 hover:text-blue-700'
-//                   }`}
-//                 >
-//                   Contact
-//                 </Link>
-//               </li>
-
-//               <li>
-//                 <div
-//                   onClick={toggleDarkMode}
-//                   className={`md:px-2 md:py-2 px-3 py-3 rounded-full text-xl md:text-sm float-end focus:outline-none ${
-//                     isDarkMode
-//                       ? 'bg-yellow-300 text-white hover:bg-yellow-400 cursor-pointer'
-//                       : 'bg-yellow-300 text-white hover:bg-yellow-600'
-//                   }`}
-//                 >
-//                   {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
-//                 </div>
-//               </li>
-//             </ul>
-//           </div>
-//         </div>
-//       </nav>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
@@ -156,24 +13,31 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b border-b border-red-500/20 bg-gray-900/80 shadow-md">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
-          <Link
-            to="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <span className="self-center animate-bounce font-bold md:text-md text-md whitespace-nowrap">
-              {"<"}AYO<span className="text-orange-500">MIDE{"/>"}</span>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 border-b shadow-md transition-colors duration-300 ${
+          isDarkMode
+            ? "bg-gradient-to-b from-gray-900 to-gray-800 border-orange-500/30"
+            : "bg-gradient-to-b from-white to-gray-100 border-orange-500/20"
+        }`}
+      >
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-4">
+          <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+            <span
+              className={`self-center font-extrabold text-xl md:text-2xl whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 animate-pulse ${
+                isDarkMode ? "text-white" : "text-gray-900"
+              }`}
+            >
+              {"<"}AYO<span className={isDarkMode ? "text-white" : "text-orange-600"}>MIDE{"/>"}</span>
             </span>
           </Link>
 
           <button
             onClick={handleToggleDropdown}
             type="button"
-            className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden ${
+            className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden transition-colors duration-200 ${
               isDarkMode
-                ? "text-white hover:bg-white/10"
-                : "text-black hover:bg-black/10"
+                ? "text-gray-300 hover:bg-gray-700/50 focus:ring-2 focus:ring-orange-500/50"
+                : "text-gray-700 hover:bg-gray-200/50 focus:ring-2 focus:ring-orange-500/50"
             }`}
             aria-controls="navbar-default"
             aria-expanded={isDropdownOpen}
@@ -196,26 +60,26 @@ const Navbar = () => {
           </button>
 
           <div
-            className={`w-full md:block md:w-auto ${
-              isDropdownOpen ? "block" : "hidden"
+            className={`w-full md:block md:w-auto transition-all duration-300 ease-in-out ${
+              isDropdownOpen ? "block opacity-100" : "hidden opacity-0 md:opacity-100"
             }`}
             id="navbar-default"
           >
             <ul
-              className={`font-medium flex flex-col p-2 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ${
+              className={`font-medium flex flex-col p-2 mt-4 border tracking-tighter rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:p-0 ${
                 isDarkMode
-                  ? "bg-black/60 border-gray-700 md:bg-transparent text-white"
-                  : "bg-white/70 border-gray-100 md:bg-transparent text-black"
+                  ? "bg-gray-900/80 border-gray-700 text-white md:bg-transparent"
+                  : "bg-white/80 border-gray-200 text-gray-900 md:bg-transparent"
               }`}
             >
-              {["Home", "Project", "Resume", "Contact", "Blog"].map((item) => (
+              {["Home", "Project", "Resume", "Contact"].map((item) => (
                 <li key={item}>
                   <Link
                     to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className={`block py-2 px-3 rounded md:p-0 ${
+                    className={`block py-2 px-3 rounded transition-colors duration-200 md:p-0 ${
                       isDarkMode
-                        ? "hover:text-white"
-                        : "hover:bg-gray-100 hover:text-blue-700"
+                        ? "hover:bg-gray-800/50 hover:text-orange-400"
+                        : "hover:bg-gray-100/50 hover:text-orange-600"
                     }`}
                   >
                     {item}
@@ -225,10 +89,10 @@ const Navbar = () => {
               <li>
                 <div
                   onClick={toggleDarkMode}
-                  className={`md:px-2 md:py-2 px-3 py-3 rounded-full text-xl md:text-sm cursor-pointer ${
+                  className={`md:px-2 md:py-2 px-3 py-3 rounded-full text-xl md:text-sm cursor-pointer transition-colors duration-200 ${
                     isDarkMode
-                      ? "bg-orange-500 text-white hover:bg-orange-400"
-                      : "bg-orange-500 text-white hover:bg-orange-600"
+                      ? "bg-orange-600 text-white hover:bg-orange-500"
+                      : "bg-orange-400 text-gray-900 hover:bg-orange-300"
                   }`}
                 >
                   {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
